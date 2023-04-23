@@ -1,0 +1,59 @@
+{
+  "name": "brandi-typed",
+  "description": "Brandi with boosted type safety for DI modules",
+  "version": "1.0.3",
+  "license": "Apache-2.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "build:cjs": "babel src --out-dir lib --extensions .ts,.tsx --out-file-extension .cjs --source-maps",
+    "lint": "eslint \"**/*.ts\"",
+    "tsd": "tsd",
+    "tsd:watch": "tsd -w",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [
+    "brandi",
+    "dependency injection",
+    "typescript"
+  ],
+  "author": {
+    "name": "Clark Andrianasolo",
+    "email": "clarkandrianasolo@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clarktsiory/brandi-typed.git"
+  },
+  "bugs": {
+    "url": "https://github.com/clarktsiory/brandi-typed/issues"
+  },
+  "homepage": "https://github.com/clarktsiory/brandi-typed",
+  "main": "lib/index.cjs",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "require": "./lib/index.cjs"
+    }
+  },
+  "dependencies": {
+    "brandi": "^4.0.1",
+    "fp-ts": "^2.12.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "@babel/preset-typescript": "^7.21.4",
+    "@types/jest": "^24.0.19",
+    "babel-loader": "^9.1.2",
+    "jest": "^29.1.2",
+    "ts-jest": "^29.0.3",
+    "tsd": "^0.24.1",
+    "tslib": "^2.5.0"
+  }
+}
